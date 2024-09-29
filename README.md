@@ -17,8 +17,8 @@ To run any code in this repository, ensure you have C++ installed on your system
 1. Install a C++ compiler (like GCC or Clang).
 2. Clone this repository:  
    ```bash
-   git clone https://github.com/YourUsername/DSA-using-Cpp.git
-   cd DSA-using-Cpp
+   git clone https://github.com/Rohan983/DSA-cpp.git
+   cd DSA-cpp
 3. Compile and run any of the .cpp files:
    ```bash
    g++ filename.cpp -o outputfile
