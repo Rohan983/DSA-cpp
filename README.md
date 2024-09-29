@@ -20,3 +20,6 @@ To run any code in this repository, ensure you have C++ installed on your system
    git clone https://github.com/YourUsername/DSA-using-Cpp.git
    cd DSA-using-Cpp
 3. Compile and run any of the .cpp files:
+   ```bash
+   g++ filename.cpp -o outputfile
+   ./outputfile
