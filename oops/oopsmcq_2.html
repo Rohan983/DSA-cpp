@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Practice MCQs - Set 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionNumber, correctAnswer) {
+            const options = document.getElementsByName('question' + questionNumber);
+            let selectedAnswer = '';
+            for (let option of options) {
+                if (option.checked) {
+                    selectedAnswer = option.value;
+                }
+            }
+            const resultElement = document.getElementById('result' + questionNumber);
+            if (selectedAnswer === correctAnswer) {
+                resultElement.innerHTML = 'Correct!';
+                resultElement.style.color = 'green';
+            } else {
+                resultElement.innerHTML = 'Incorrect. The correct answer is ' + correctAnswer + '.';
+                resultElement.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Oriented Programming Practice MCQs - Set 2</h1>
+        
+        <div class="question">
+            <p>11. What is the output of the following code?</p>
+            <div class="options">
+                <label><input type="radio" name="question11" value="a"> a) A</label>
+                <label><input type="radio" name="question11" value="b"> b) ~A</label>
+                <label><input type="radio" name="question11" value="c"> c) A~A</label>
+                <label><input type="radio" name="question11" value="d"> d) Compilation error</label>
+            </div>
+            <button class="button" onclick="checkAnswer(11, 'c')">Check Answer</button>
+            <p class="result" id="result11"></p>
+        </div>
+
+        <div class="question">
+            <p>12. Which of the following is not a type of constructor in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question12" value="a"> a) Default constructor</label>
+                <label><input type="radio" name="question12" value="b"> b) Parameterized constructor</label>
+                <label><input type="radio" name="question12" value="c"> c) Copy constructor</label>
+                <label><input type="radio" name="question12" value="d"> d) Virtual constructor</label>
+            </div>
+            <button class="button" onclick="checkAnswer(12, 'd')">Check Answer</button>
+            <p class="result" id="result12"></p>
+        </div>
+
+        <div class="question">
+            <p>13. How is dynamic polymorphism achieved in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question13" value="a"> a) Using overloaded functions</label>
+                <label><input type="radio" name="question13" value="b"> b) Using function overriding</label>
+                <label><input type="radio" name="question13" value="c"> c) Using function templates</label>
+                <label><input type="radio" name="question13" value="d"> d) Using default arguments</label>
+            </div>
+            <button class="button" onclick="checkAnswer(13, 'b')">Check Answer</button>
+            <p class="result" id="result13"></p>
+        </div>
+
+        <div class="question">
+            <p>14. Which of the following can be declared as a friend in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question14" value="a"> a) Function</label>
+                <label><input type="radio" name="question14" value="b"> b) Class</label>
+                <label><input type="radio" name="question14" value="c"> c) Another object</label>
+                <label><input type="radio" name="question14" value="d"> d) Both a and b</label>
+            </div>
+            <button class="button" onclick="checkAnswer(14, 'd')">Check Answer</button>
+            <p class="result" id="result14"></p>
+        </div>
+
+        <div class="question">
+            <p>15. What is the output of the following code?</p>
+            <div class="options">
+                <label><input type="radio" name="question15" value="a"> a) Base</label>
+                <label><input type="radio" name="question15" value="b"> b) Derived</label>
+                <label><input type="radio" name="question15" value="c"> c) Compilation error</label>
+                <label><input type="radio" name="question15" value="d"> d) Runtime error</label>
+            </div>
+            <button class="button" onclick="checkAnswer(15, 'b')">Check Answer</button>
+            <p class="result" id="result15"></p>
+        </div>
+
+        <div class="question">
+            <p>16. Which of the following is true about pure virtual functions?</p>
+            <div class="options">
+                <label><input type="radio" name="question16" value="a"> a) They have no implementation in the base class</label>
+                <label><input type="radio" name="question16" value="b"> b) They must be implemented in the derived class</label>
+                <label><input type="radio" name="question16" value="c"> c) They are declared using the syntax = 0</label>
+                <label><input type="radio" name="question16" value="d"> d) All of the above</label>
+            </div>
+            <button class="button" onclick="checkAnswer(16, 'd')">Check Answer</button>
+            <p class="result" id="result16"></p>
+        </div>
+
+        <div class="question">
+            <p>17. What is an abstract class in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question17" value="a"> a) A class that cannot be instantiated</label>
+                <label><input type="radio" name="question17" value="b"> b) A class with at least one pure virtual function</label>
+                <label><input type="radio" name="question17" value="c"> c) A class with all its functions pure virtual</label>
+                <label><input type="radio" name="question17" value="d"> d) Both a and b</label>
+            </div>
+            <button class="button" onclick="checkAnswer(17, 'd')">Check Answer</button>
+            <p class="result" id="result17"></p>
+        </div>
+
+        <div class="question">
+            <p>18. What is the use of the this pointer in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question18" value="a"> a) To access the static members of the class</label>
+                <label><input type="radio" name="question18" value="b"> b) To differentiate between local and global variables</label>
+                <label><input type="radio" name="question18" value="c"> c) To access the object's members within the class methods</label>
+                <label><input type="radio" name="question18" value="d"> d) None of the above</label>
+            </div>
+            <button class="button" onclick="checkAnswer(18, 'c')">Check Answer</button>
+            <p class="result" id="result18"></p>
+        </div>
+
+        <div class="question">
+            <p>19. What is the default access specifier for members of a class in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question19" value="a"> a) Public</label>
+                <label><input type="radio" name="question19" value="b"> b) Private</label>
+                <label><input type="radio" name="question19" value="c"> c) Protected</label>
+                <label><input type="radio" name="question19" value="d"> d) None</label>
+            </div>
+            <button class="button" onclick="checkAnswer(19, 'b')">Check Answer</button>
+            <p class="result" id="result19"></p>
+        </div>
+
+        <div class="question">
+            <p>20. Which of the following is correct about operator overloading in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question20" value="a"> a) It allows defining new operators</label>
+                <label><input type="radio" name="question20" value="b"> b) It allows using operators with user-defined data types</label>
+                <label><input type="radio" name="question20" value="c"> c) It changes the syntax of the language</label>
+                <label><input type="radio" name="question20" value="d"> d) None of the above</label>
+            </div>
+            <button class="button" onclick="checkAnswer(20, 'b')">Check Answer</button>
+            <p class="result" id="result20"></p>
+        </div>
+
+    </div>
+</body>
+</html>

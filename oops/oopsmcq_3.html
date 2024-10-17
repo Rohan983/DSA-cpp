@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Practice MCQs - Set 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionNumber, correctAnswer) {
+            const options = document.getElementsByName('question' + questionNumber);
+            let selectedAnswer = '';
+            for (let option of options) {
+                if (option.checked) {
+                    selectedAnswer = option.value;
+                }
+            }
+            const resultElement = document.getElementById('result' + questionNumber);
+            if (selectedAnswer === correctAnswer) {
+                resultElement.innerHTML = 'Correct!';
+                resultElement.style.color = 'green';
+            } else {
+                resultElement.innerHTML = 'Incorrect. The correct answer is ' + correctAnswer + '.';
+                resultElement.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Oriented Programming Practice MCQs - Set 3</h1>
+        
+        <div class="question">
+            <p>21. What is the correct way to define a copy constructor?</p>
+            <div class="options">
+                <label><input type="radio" name="question21" value="a"> a) A(const A obj) { /.../ }</label>
+                <label><input type="radio" name="question21" value="b"> b) A(A &obj) { /.../ }</label>
+                <label><input type="radio" name="question21" value="c"> c) A(A obj) { /.../ }</label>
+                <label><input type="radio" name="question21" value="d"> d) A(const A &obj) { /.../ }</label>
+            </div>
+            <button class="button" onclick="checkAnswer(21, 'd')">Check Answer</button>
+            <p class="result" id="result21"></p>
+        </div>
+
+        <div class="question">
+            <p>22. Which of the following is a correct way to declare an array of objects in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question22" value="a"> a) ClassName obj[5];</label>
+                <label><input type="radio" name="question22" value="b"> b) ClassName obj = new ClassName[5];</label>
+                <label><input type="radio" name="question22" value="c"> c) ClassName obj{5};</label>
+                <label><input type="radio" name="question22" value="d"> d) ClassName obj{};</label>
+            </div>
+            <button class="button" onclick="checkAnswer(22, 'a')">Check Answer</button>
+            <p class="result" id="result22"></p>
+        </div>
+
+        <div class="question">
+            <p>23. Which of the following is true about inheritance in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question23" value="a"> a) Derived class inherits private members of the base class</label>
+                <label><input type="radio" name="question23" value="b"> b) Derived class can access protected members of the base class</label>
+                <label><input type="radio" name="question23" value="c"> c) Derived class cannot override base class methods</label>
+                <label><input type="radio" name="question23" value="d"> d) None of the above</label>
+            </div>
+            <button class="button" onclick="checkAnswer(23, 'b')">Check Answer</button>
+            <p class="result" id="result23"></p>
+        </div>
+
+        <div class="question">
+            <p>24. What does the protected access specifier mean?</p>
+            <div class="options">
+                <label><input type="radio" name="question24" value="a"> a) Members are accessible only within the same class</label>
+                <label><input type="radio" name="question24" value="b"> b) Members are accessible within the same class and derived classes</label>
+                <label><input type="radio" name="question24" value="c"> c) Members are accessible within the same class and friend classes</label>
+                <label><input type="radio" name="question24" value="d"> d) Members are accessible from anywhere in the program</label>
+            </div>
+            <button class="button" onclick="checkAnswer(24, 'b')">Check Answer</button>
+            <p class="result" id="result24"></p>
+        </div>
+
+        <div class="question">
+            <p>25. What is a virtual destructor in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question25" value="a"> a) A destructor that does nothing</label>
+                <label><input type="radio" name="question25" value="b"> b) A destructor that can be called manually</label>
+                <label><input type="radio" name="question25" value="c"> c) A destructor that ensures derived class destructors are called</label>
+                <label><input type="radio" name="question25" value="d"> d) A destructor that can be overridden</label>
+            </div>
+            <button class="button" onclick="checkAnswer(25, 'c')">Check Answer</button>
+            <p class="result" id="result25"></p>
+        </div>
+
+        <div class="question">
+            <p>26. What is the output of the following code?</p>
+            <div class="options">
+                <label><input type="radio" name="question26" value="a"> a) Base</label>
+                <label><input type="radio" name="question26" value="b"> b) Derived</label>
+                <label><input type="radio" name="question26" value="c"> c) BaseDerived</label>
+                <label><input type="radio" name="question26" value="d"> d) DerivedBase</label>
+            </div>
+            <button class="button" onclick="checkAnswer(26, 'c')">Check Answer</button>
+            <p class="result" id="result26"></p>
+        </div>
+
+        <div class="question">
+            <p>27. Which of the following is true about constructors and inheritance?</p>
+            <div class="options">
+                <label><input type="radio" name="question27" value="a"> a) Base class constructor is called after derived class constructor</label>
+                <label><input type="radio" name="question27" value="b"> b) Derived class constructor is called after base class constructor</label>
+                <label><input type="radio" name="question27" value="c"> c) Constructors are not called in inheritance</label>
+                <label><input type="radio" name="question27" value="d"> d) Constructors are called in any order</label>
+            </div>
+            <button class="button" onclick="checkAnswer(27, 'b')">Check Answer</button>
+            <p class="result" id="result27"></p>
+        </div>
+
+        <div class="question">
+            <p>28. How is operator overloading done in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question28" value="a"> a) Using the operator keyword</label>
+                <label><input type="radio" name="question28" value="b"> b) Using function overloading</label>
+                <label><input type="radio" name="question28" value="c"> c) Using the overload keyword</label>
+                <label><input type="radio" name="question28" value="d"> d) Using inheritance</label>
+            </div>
+            <button class="button" onclick="checkAnswer(28, 'a')">Check Answer</button>
+            <p class="result" id="result28"></p>
+        </div>
+
+        <div class="question">
+            <p>29. What does the delete operator do in C++?</p>
+            <div class="options">
+                <label><input type="radio" name="question29" value="a"> a) Deletes an object from memory</label>
+                <label><input type="radio" name="question29" value="b"> b) Deletes a class</label>
+                <label><input type="radio" name="question29" value="c"> c) Deletes a function</label>
+                <label><input type="radio" name="question29" value="d"> d) Deletes an attribute</label>
+            </div>
+            <button class="button" onclick="checkAnswer(29, 'a')">Check Answer</button>
+            <p class="result" id="result29"></p>
+        </div>
+
+        <div class="question">
+            <p>30. What is the output of the following code?</p>
+            <div class="options">
+                <label><input type="radio" name="question30" value="a"> a) A</label>
+                <label><input type="radio" name="question30" value="b"> b) B</label>
+                <label><input type="radio" name="question30" value="c"> c) AB</label>
+                <label><input type="radio" name="question30" value="d"> d) Compilation error</label>
+            </div>
+            <button class="button" onclick="checkAnswer(30, 'b')">Check Answer</button>
+            <p class="result" id="result30"></p>
+        </div>
+
+    </div>
+</body>
+</html>
