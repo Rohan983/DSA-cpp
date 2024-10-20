@@ -27,12 +27,14 @@ bool isValid(int N, vector<int> A, int K, int maxPart){
 
 // Function to find the minimum time to complete the tasks with K workers
 int minTime(int N, vector<int> A, int K){
-    int sum = 0, ans = -1;
+    if(N<K) return -1;
+
+    int st = INT_MIN, ed = 0, ans = -1;
     for(int ele : A){
-        sum += ele; // Calculate the total sum of elements
+        ed += ele; // Calculate the total sum of elements
+        st = max(st, ele);
     }
 
-    int st = 0, ed = sum;
     while(st<=ed){
         int mid = st + (ed - st)/2; // Find the middle point
 
@@ -49,7 +51,7 @@ int minTime(int N, vector<int> A, int K){
 
 int main(){
     int N = 4, K = 2;
-    vector<int> A = {10,10,10,10};
+    vector<int> A = {40,30,10,20};
 
     cout << minTime(N, A, K) << endl; // Output the result
 
