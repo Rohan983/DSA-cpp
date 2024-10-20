@@ -49,7 +49,7 @@ int minTime(int N, vector<int> A, int K){
 
 int main(){
     int N = 4, K = 2;
-    vector<int> A = {40,30,10,20};
+    vector<int> A = {10,10,10,10};
 
     cout << minTime(N, A, K) << endl; // Output the result
 
