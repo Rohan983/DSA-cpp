@@ -69,8 +69,6 @@ int main(){
 }
 
 /* 
-   Suggested file name: sort_colors_algorithm.cpp
-
    Explanation:
    This code implements the Dutch National Flag algorithm to sort an array of colors represented by 0, 1, and 2.
    The function `sortColorsDNF` sorts the input array in one pass with O(n) time complexity and O(1) space complexity.
